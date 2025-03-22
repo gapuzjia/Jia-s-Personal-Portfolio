@@ -5,9 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Personal Website</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Include Image Map Resizer -->
+  <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <script src="script.js"></script>
+  <div id="container">
+    <div id="image-container">
+      <!-- Responsive Image with Map -->
+      <img src="website layout.png" usemap="#image-map" id="main-image" />
+
+      <!-- Image Map Generated -->
+      <map name="image-map">
+        <area target="" alt="fashion" title="fashion" href="" coords="215,714,109,719,52,816,70,866,67,914,38,956,23,982,40,1021,59,1038,118,1060,152,1024,170,971,226,961,248,988,243,1048,294,1063,333,1048,362,1022,452,1029,466,1021,479,897,455,787,438,709" shape="poly">
+        <area target="" alt="baking" title="baking" href="" coords="180,511,185" shape="circle">
+        <area target="" alt="cafes" title="cafes" href="" coords="862,619,808,656,791,712,766,761,728,826,728,855,749,929,761,966,834,994,927,1009,978,914,976,871,966,802,988,743,1002,687,976,641,930,598" shape="poly">
+        <area target="" alt="cameras" title="cameras" href="" coords="1259,634,1219,656,1158,710,1078,751,1047,821,1083,856,1105,897,1142,949,1176,1016,1202,1046,1302,990,1336,939,1378,865,1415,765,1385,678" shape="poly">
+        <area target="" alt="projects" title="projects" href="" coords="1916,653,1770,590,1658,563,1616,622,1602,702,1561,775,1502,880,1478,927,1490,988,1583,1043,1646,1065,1897,1061,1912,1068" shape="poly">
+        <area target="" alt="thoughts" title="thoughts" href="" coords="652,376,598,429,513,471,435,534,438,592,520,705,589,749,664,705,761,614,813,548,837,495" shape="poly">
+      </map>
+    </div>
+  </div>
+
+  <!-- Resize the image map after page loads -->
+  <script>
+    window.addEventListener('load', function () {
+      imageMapResize();
+    });
+  </script>
 </body>
 </html>

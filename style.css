@@ -1,7 +1,27 @@
-body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    padding: 50px;
-  }
-  
+/* Make page full screen */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Full-screen container */
+#container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Image container takes full screen */
+#image-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* Responsive image styling */
+#image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Or use 'contain' if you don't want cropping */
+  display: block;
+}
