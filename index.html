@@ -5,34 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Personal Website</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Include Image Map Resizer -->
-  <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+<!-- Include Image Map Resizer -->
+<script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
 </head>
+
 <body>
   <div id="container">
     <div id="image-container">
-      <!-- Responsive Image with Map -->
+      <!-- Main Image -->
       <img src="assets/index.png" usemap="#image-map" id="main-image" />
 
-      <!-- Image Map Generated -->
+      <!-- 🔽 Zoom Effect Layer (Place this here) -->
+      <div id="zoom-layer">
+        <img id="zoom-image" src="" alt="Zoomed Area" />
+      </div>
+
+      <!-- Clickable Map Areas -->
       <map name="image-map">
-        <area target="" alt="baking" title="baking" href="" coords="212,556,174" shape="circle">
-        <area target="" alt="fashion" title="fashion" href="" coords="423,760,325,727,269,751,225,819,250,916,243,994,269,1043,318,1007,347,987,410,1005,449,1044,471,1056,544,1031,579,975,598,917,622,868,632,807,630,788,561,756,522,741,464,768" shape="poly">
-        <area target="" alt="cameras" title="cameras" href="" coords="996,824,820,777,740,765,700,822,688,888,688,921,727,971,829,978,925,1024,1008,1043,1059,997,1093,926,1081,880,1063,844" shape="poly">
-        <area target="" alt="cafes" title="cafes" href="" coords="1448,546,1373,566,1299,628,1293,662,1283,727,1258,752,1244,803,1246,866,1278,928,1314,932,1397,906,1461,773,1475,741,1500,643,1500,576" shape="poly">
-        <area target="" alt="projects" title="projects" href="" coords="1897,654,1641,563,1627,617,1609,697,1605,751,1548,855,1521,894,1475,977,1539,1019,1622,1055,1767,1068,1829,1070,1889,1072,1906,971,1912,768" shape="poly">
-        <area target="" alt="profile" title="profile" href="" coords="1455,96,1413,340,1413,357,1511,377,1614,391,1696,398,1792,420,1860,423,1879,323,1887,230,1884,192,1862,128" shape="poly">
-        <area target="" alt="thoughts" title="thoughts" href="" coords="471,183,416,93,332,75,271,137,226,222,216,261,216,290,299,356,403,404,477,446,520,476,550,390,576,327,569,254,523,215" shape="poly">
-    </map>
+        <area alt="fashion" title="Fashion" href="fashion.html"
+          coords="345,645,279,626,231,626,201,655,185,672,185,729,189,782,189,823,189,875,189,953,174,994,192,1011,241,1024,263,1014,314,968,333,968,353,985,387,1023,452,989,464,980,491,924,499,889,526,884,548,882,572,823,572,772,565,746,552,723,538,675,537,653,460,636,433,638"
+          shape="poly">
+        <area alt="camera" title="Camera" href="cameras.html" coords="908,788,864,793,800,785,759,788,710,814,700,858,698,900,701,953,762,966,795,961,852,977,910,997,1003,1014,1017,965,1012,917,1020,883,1027,855,1029,829,1015,812,988,805"
+          shape="poly">
+        <area alt="projects" title="Projects" href="projects.html"
+          coords="1917,641,1868,621,1744,580,1663,563,1651,639,1633,717,1624,749,1597,799,1571,851,1546,910,1546,951,1549,973,1599,999,1648,1014,1702,1034,1760,1046,1826,1061,1877,1061,1907,1061,1916,1048"
+          shape="poly">
+        <area alt="cafes" title="Cafes" href="cafes.html"
+          coords="1502,434,1431,443,1400,485,1375,544,1366,554,1329,578,1292,626,1285,704,1285,748,1307,768,1341,826,1363,832,1417,848,1495,848,1546,821,1543,705,1565,619,1573,585,1583,536,1612,492,1626,463,1631,437,1571,454"
+          shape="poly">
+        <area alt="thoughts" title="Thoughts" href="thoughts.html"
+          coords="481,168,449,127,405,75,345,103,337,148,304,202,284,244,315,288,347,298,389,332,437,358,489,380,533,392,540,336,561,276,567,256,567,212,545,207"
+          shape="poly">
+        <area alt="profile" title="Profile" href="profile.html"
+          coords="1614,103,1538,92,1504,102,1466,148,1446,203,1443,258,1437,322,1436,342,1492,351,1560,358,1610,378,1670,395,1741,402,1811,405,1858,380,1858,329,1861,305,1885,231,1885,168,1878,117,1822,117,1750,114,1690,117"
+          shape="poly">
+          <area target="" alt="baking" title="baking" href="baking.html" coords="1,398,38,370,77,351,101,341,121,322,167,312,211,312,243,309,262,324,281,344,335,361,345,368,372,390,391,420,393,458,396,490,389,522,367,539,335,568,299,588,235,604,167,607,145,609,74,595,33,571,9,549,3,539" shape="poly">
+        </map>
+      </map>
     </div>
   </div>
 
-  <!-- Resize the image map after page loads -->
-  <script>
-    window.addEventListener('load', function () {
-      imageMapResize();
-    });
-  </script>
+  <script src="script.js"></script>
+
 </body>
 </html>
